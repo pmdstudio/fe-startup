@@ -5,9 +5,9 @@ This a starter Laravel 12 project with basic skeleton, configured with:
 -   Laravel Mix
 -   Bootstrap 5
 -   FontAwesome Free
--   SCSS структура
--   JSON-базирано съдържание (`data.json`)
--   Базови Blade layout-и (header, footer, home, page)
+-   SCSS structure
+-   JSON-based demo content (`data.json`)
+-   Basic Blade layout-и (header, footer, home, page)
 
 This project is ready for fast UI development of pages, that can be implemeted later in any real Laravel system or used for other projects.
 
@@ -27,32 +27,53 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Start
 
-```bash
-
 # 1. Project clone
+
+```bash
 git clone https://github.com/pmdstudio/fe-startup.git
 cd fe-startup
+```
 
 # 2. Composer dependencies
+
+```bash
 composer install
 php artisan key:generate
+```
 
 # 3. NPM dependencies
+
+```bash
 npm install
+```
 
 # 4. Laravel Mix build
+
+```bash
 npm run dev
+```
 
 # 5. Watch for changes (watch mode)
+
+```bash
 npm run watch
+```
 
 # 6. Production build (minify + versioning)
+
+```bash
 npm run prod
+```
 
 # 7. Start local service
+
+```bash
 php artisan serve
+```
 
 # 8. Usefull Laravel commands - optional
+
+```bash
 php artisan cache:clear
 php artisan config:clear
 php artisan view:clear
