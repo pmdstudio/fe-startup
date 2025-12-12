@@ -9,10 +9,10 @@
 
 <body class="d-flex flex-column h-100">
     @include('layouts.partials.header')
-    <main class="flex-shrink-0">
-        <div class="container py-4">
+    <main class="flex-grow-1">
+        <div class="container h-100 py-4">
             @yield('content')
-            <div class="container py-4">
+        </div>
     </main>
     @include('layouts.partials.footer')
     <script src="{{ mix('js/app.js') }}"></script>
