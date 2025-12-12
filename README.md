@@ -1,12 +1,19 @@
-## About FE Starter
+## Front-end Bootstrap 5 + Laravel 12 Skeleton
 
-FE Starter (Front End Starter) is a small web application based on Laravel framework with Bootstrap and Fontawesome installed. It's ready for download and start your next front-end project.
+This a starter Laravel 12 project with basic skeleton, configured with:
 
--   [Laravel 12](https://laravel.com/).
--   [Bootstrap 5 UI](https://getbootstrap.com).
--   [Fontawesome 7 free](https://fontawesome.com).
+-   Laravel Mix
+-   Bootstrap 5
+-   FontAwesome Free
+-   SCSS структура
+-   JSON-базирано съдържание (`data.json`)
+-   Базови Blade layout-и (header, footer, home, page)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+This project is ready for fast UI development of pages, that can be implemeted later in any real Laravel system or used for other projects.
+
+-   [Laravel 12](https://laravel.com/)
+-   [Bootstrap 5 UI](https://getbootstrap.com)
+-   [Fontawesome 7 free](https://fontawesome.com)
 
 ## Learning Laravel
 
@@ -18,49 +25,34 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-# Front-end Bootstrap 5 + Laravel 12 Skeleton
-
-Това е стартов Laravel 12 проект, конфигуриран със:
-
--   Laravel Mix
--   Bootstrap 5
--   FontAwesome Free
--   SCSS структура
--   JSON-базирано съдържание (`data.json`)
--   Базови Blade layout-и (header, footer, home, empty)
-
-Проектът е подготвен за бърза разработка на статични UI страници, които по-късно могат да бъдат интегрирани в реална Laravel система.
-
----
-
-## 📥 Клониране на репото
+## Start
 
 ```bash
 
-# 1. Клониране на проекта
+# 1. Project clone
 git clone https://github.com/pmdstudio/fe-startup.git
-cd your-repo
+cd fe-startup
 
-# 2. Composer зависимости
+# 2. Composer dependencies
 composer install
 php artisan key:generate
 
-# 3. NPM зависимости
+# 3. NPM dependencies
 npm install
 
-# 4. Laravel Mix билд
+# 4. Laravel Mix build
 npm run dev
 
-# 5. Следене за промени (watch mode)
+# 5. Watch for changes (watch mode)
 npm run watch
 
-# 6. Production билд (minify + versioning)
+# 6. Production build (minify + versioning)
 npm run prod
 
-# 7. Стартиране на локален сървър
+# 7. Start local service
 php artisan serve
 
-# 8. Полезни Laravel команди при проблеми с кеша
+# 8. Usefull Laravel commands - optional
 php artisan cache:clear
 php artisan config:clear
 php artisan view:clear
