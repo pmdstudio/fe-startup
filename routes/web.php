@@ -6,6 +6,10 @@ use App\Helpers\DataHelper;
 
 $data = DataHelper::load();
 
+Route::get('/', function () {
+    return view('home', ['title' => 'Начало']);
+})->name('home');
+
 // Генерираме страници от менюто
 foreach ($data['menu'] as $item) {
 
