@@ -27,51 +27,51 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Start
 
-# 1. Project clone
+1. Project clone
 
 ```bash
 git clone https://github.com/pmdstudio/fe-startup.git
 cd fe-startup
 ```
 
-# 2. Composer dependencies
+2. Composer dependencies
 
 ```bash
 composer install
 php artisan key:generate
 ```
 
-# 3. NPM dependencies
+3. NPM dependencies
 
 ```bash
 npm install
 ```
 
-# 4. Laravel Mix build
+4. Laravel Mix build
 
 ```bash
 npm run dev
 ```
 
-# 5. Watch for changes (watch mode)
+5. Watch for changes (watch mode)
 
 ```bash
 npm run watch
 ```
 
-# 6. Production build (minify + versioning)
+6. Production build (minify + versioning)
 
 ```bash
 npm run prod
 ```
 
-# 7. Start local service
+7. Start local service
 
 ```bash
 php artisan serve
 ```
 
-# 8. Usefull Laravel commands - optional
+8. Usefull Laravel commands - optional
 
 ```bash
 php artisan cache:clear
