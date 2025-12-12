@@ -1,12 +1,3 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
 ## About FE Starter
 
 FE Starter (Front End Starter) is a small web application based on Laravel framework with Bootstrap and Fontawesome installed. It's ready for download and start your next front-end project.
@@ -26,3 +17,52 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# Front-end Bootstrap 5 + Laravel 12 Skeleton
+
+Това е стартов Laravel 12 проект, конфигуриран със:
+
+-   Laravel Mix
+-   Bootstrap 5
+-   FontAwesome Free
+-   SCSS структура
+-   JSON-базирано съдържание (`data.json`)
+-   Базови Blade layout-и (header, footer, home, empty)
+
+Проектът е подготвен за бърза разработка на статични UI страници, които по-късно могат да бъдат интегрирани в реална Laravel система.
+
+---
+
+## 📥 Клониране на репото
+
+```bash
+
+# 1. Клониране на проекта
+git clone https://github.com/pmdstudio/fe-startup.git
+cd your-repo
+
+# 2. Composer зависимости
+composer install
+php artisan key:generate
+
+# 3. NPM зависимости
+npm install
+
+# 4. Laravel Mix билд
+npm run dev
+
+# 5. Следене за промени (watch mode)
+npm run watch
+
+# 6. Production билд (minify + versioning)
+npm run prod
+
+# 7. Стартиране на локален сървър
+php artisan serve
+
+# 8. Полезни Laravel команди при проблеми с кеша
+php artisan cache:clear
+php artisan config:clear
+php artisan view:clear
+
+```
