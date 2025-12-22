@@ -1,20 +1,103 @@
 {
     "menu": [
-        { "title": "Home", "route": "home" },
-        { "title": "Services", "route": "page" },
-        { "title": "About", "route": "page" },
-        { "title": "Contacts", "route": "page" },
-        { "title": "Blog", "route": "но" }
+        { "title": "За фонда", "route": "home" },
+        { "title": "Програми и финансиране", "route": "page" },
+        { "title": "Условия за кандидатстване", "route": "page" },
+        { "title": "Проекти и резултати", "route": "page" },
+        { "title": "Новини и събоития", "route": "page" },
+        { "title": "Документи", "route": "page" }
+    ],
+
+    "top_menu": [
+        { "title": "Контакти", "route": "page" },
+        { "title": "Карта на сайта", "route": "page" }
     ],
     "home": {
         "title": "Welcome",
         "subtitle": "This is a simple page with  Bootstrap 5.",
-        "content": "Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking."
+        "content": "Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.",
+        "blocks": [
+            {
+                "title": "Програми и финансиране",
+                "text": "Информация за текущите програми и възможности за финансиране",
+                "img": "icon-01.png"
+            },
+            {
+                "title": "Условия за кандидатстване",
+                "text": "Вижте как се кандидатства по конкретна програма",
+                "img": "icon-02.png"
+            },
+            {
+                "title": "Проекти и резултати",
+                "text": "Изпълнени проекти и отчетени резултати по програмите",
+                "img": "icon-03.png"
+            }
+        ]
     },
-
     "page": {
         "title": "Empty page",
         "subtitle": "This is a simple page with  Bootstrap 5.",
         "content": "Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking."
+    },
+
+    "news": {
+        "title": "Новини",
+        "subtitle": "",
+        "content": "",
+        "img": "",
+        "items": [
+            {
+                "title": "21 проекта за иновации ще получат близо 7 милиона лева от национален иновационен фонд",
+                "date": "19.12.2025",
+                "summary": "Кратко резюме на новина 1.",
+                "img": "news-01.jpg"
+            },
+            {
+                "title": "21 проекта за иновации ще получат близо 7 милиона лева от национален иновационен фонд",
+                "date": "20.12.2025",
+                "summary": "Кратко резюме на новина 2.",
+                "img": "news-02.jpg"
+            },
+
+            {
+                "title": "Национален иновационен фонд – Информационен уебинар за старт на 13-та конкурсна сесия",
+                "date": "25.12.2025",
+                "summary": "Кратко резюме на новина 2.",
+                "img": "news-03.jpg"
+            }
+        ]
+    },
+
+    "programs": {
+        "title": "Активни Програми",
+        "subtitle": "",
+        "content": "",
+        "img": "",
+        "items": [
+            {
+                "title": "Програма \"Конкурентоспособност и иновации в предприятията\" 2021-2027",
+                "date": "01.01.2025 - 31.12.2025",
+                "summary": "Проект BG16RFPR001-1.009-0001 „Предоставяне на комплексни услуги на предприятията от Северните райони на България с цел подкрепа на тяхното устойчиво развитие и растеж чрез подпомагане дейността на Изпълнителна агенция за насърчаване на малките и средните предприятия“",
+                "budget": "9 779 150.00",
+                "period": "36 месеца",
+                "status": 1
+            },
+            {
+                "title": "Програма \"Конкурентоспособност и иновации в предприятията\" 2021-2027",
+                "date": "01.02.2025 - 31.01.2026",
+                "summary": "Проект BG16RFPR001-1.002-0001 „Реализация на мерки за интернационализация на българските МСП чрез подкрепа дейността на Изпълнителна агенция за насърчаване на малките и средните предприятия (ИАНМСП)“",
+                "budget": "9 993 101.37",
+                "period": "36 месеца",
+                "status": 2
+            },
+            {
+                "title": "Програма \"Фонд за двустранни отношения“— приоритетна ос „Предефинирани инициативи\"",
+                "date": "01.03.2025 - 28.02.2026",
+                "summary": "Проект BG16RFPR001-1.005-0001 „Подкрепа за развитие на клъстери и мрежи от предприятия чрез подпомагане дейността на Изпълнителна агенция за насърчаване на малките и средните предприятия (ИАНМСП)“",
+                "budget": "9 998 950.00",
+                "period": "36 месеца",
+                "status": 0
+            }
+        ]
     }
 }

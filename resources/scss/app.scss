@@ -1,6 +1,3 @@
-// Bootstrap
-@import "~bootstrap/scss/bootstrap";
-
 // Font Awesome Free
 $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
@@ -8,5 +5,18 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/regular";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
-// Custom overrides (optional)
-// body { background: #f8f9fa; }
+/* Bootstrap Theme colors */
+$primary: #003b53;
+$secondary: #007fb4;
+$info: #b0dbed;
+$success: #8cc747;
+
+$card-border-radius: 1.25rem;
+
+// Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+/* Custom styles */
+// @import "fonts.scss";
+@import "site.scss";
+// @import "mobile.scss";
