@@ -8,6 +8,15 @@
         { "title": "Документи", "route": "page" }
     ],
 
+    "footerMenu": [
+        { "title": "Карта на сайта", "route": "home" },
+        { "title": "Условия за ползване", "route": "page" },
+        { "title": "Политика за поверителност", "route": "page" },
+        { "title": "Декларация за достъпност", "route": "page" },
+        { "title": "Декларации по ЗПКОНПИ", "route": "page" },
+        { "title": "Антикорупция", "route": "page" }
+    ],
+
     "top_menu": [
         { "title": "Контакти", "route": "page" },
         { "title": "Карта на сайта", "route": "page" }
@@ -97,6 +106,52 @@
                 "budget": "9 998 950.00",
                 "period": "36 месеца",
                 "status": 0
+            }
+        ]
+    },
+
+    "partners": {
+        "title": "Нашите партньори",
+        "items": [
+            {
+                "name": "Партньор 1",
+                "img": "partner-01.jpg",
+                "url": "#"
+            },
+            {
+                "name": "Партньор 2",
+                "img": "partner-02.jpg",
+                "url": "#"
+            },
+            {
+                "name": "Партньор 3",
+                "img": "partner-03.jpg",
+                "url": "#"
+            },
+            {
+                "name": "Партньор 4",
+                "img": "partner-04.jpg",
+                "url": "#"
+            },
+            {
+                "name": "Партньор 5",
+                "img": "partner-05.jpg",
+                "url": "#"
+            },
+            {
+                "name": "Партньор 6",
+                "img": "partner-06.jpg",
+                "url": "#"
+            },
+            {
+                "name": "Партньор 7",
+                "img": "partner-07.jpg",
+                "url": "#"
+            },
+            {
+                "name": "Партньор 8",
+                "img": "partner-08.jpg",
+                "url": "#"
             }
         ]
     }

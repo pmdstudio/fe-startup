@@ -5,6 +5,7 @@
 $page = \App\Helpers\DataHelper::load()['home'];
 $news = \App\Helpers\DataHelper::load()['news'];
 $programs = \App\Helpers\DataHelper::load()['programs'];
+$partners = \App\Helpers\DataHelper::load()['partners']['items'];
 @endphp
 
 
@@ -110,11 +111,11 @@ $programs = \App\Helpers\DataHelper::load()['programs'];
 <section class="news bg-light">
     <div class="container">
         <h1 class="title">{{ $news['title'] }}</h1>
-        <div class="row">
+        <div class="row gy-4">
 
             <!-- news section -->
             @foreach($news['items'] as $post)
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <figure class="card-img-top">
                         <img src="{{ asset('assets/img/' . $post['img']) }}" class="img-fluid">
@@ -140,11 +141,11 @@ $programs = \App\Helpers\DataHelper::load()['programs'];
 
 <section class="news bg-white">
     <div class="container">
-        <div class="row">
+        <div class="row gy-4">
 
-            <!-- news section -->
+            <!-- news 2 section -->
             @foreach($news['items'] as $post)
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <figure class="card-img-top">
                         <img src="{{ asset('assets/img/' . $post['img']) }}" class="img-fluid">
@@ -160,9 +161,28 @@ $programs = \App\Helpers\DataHelper::load()['programs'];
                 </div>
             </div>
             @endforeach
-            <!-- end news section -->
+            <!-- end news 2 section -->
 
         </div>
+    </div>
+</section>
+
+<section class="partners bg-light">
+    <div class="container">
+        <div class="row gy-1">
+
+            <!-- partners section -->
+            @foreach($partners as $partner)
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                <figure class="partner-logo">
+                    <a href="{{ $partner['url']}} "><img src="{{ asset('assets/img/' . $partner['img']) }}" class="img-fluid"></a>
+                </figure>
+            </div>
+            @endforeach
+            <!-- end partners section -->
+
+        </div>
+
     </div>
 </section>
 

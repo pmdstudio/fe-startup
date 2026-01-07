@@ -5,6 +5,7 @@
     --info-color: #b0dbed;
     --success-color: #8cc747;
     --light-color: #e6ebed;
+    --dark-color: #001d2a;
 
     --font-family: "Sofia Sans", sans-serif;
     --icon-font-family: "Font Awesome 7 Free";
@@ -35,12 +36,14 @@ body {
     }
 }
 
-header {
-    .brand {
-        text-decoration: none;
-        max-width: 300px;
-    }
+.brand {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+}
 
+header {
     nav {
         .nav-item {
             .nav-link {
@@ -125,6 +128,11 @@ header {
         aspect-ratio: var(--thumbnail-ratio);
         width: 100%;
         object-fit: cover;
+    }
+
+    .card-img,
+    .card-img-top {
+        border-top-right-radius: 0;
     }
 
     .card-title {
@@ -217,6 +225,39 @@ section {
                 @extend .shadow-lg;
 
                 .card-text {
+                    color: var(--secondary-color);
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background: var(--dark-color);
+    font-family: var(--font-family);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    .card {
+        background: transparent;
+        border: 1px solid var(--primary-color);
+        box-shadow: none;
+        .card-body {
+            @extend .p-4;
+        }
+    }
+
+    ul {
+        margin: 0;
+        li {
+            color: #fff;
+            // border-bottom: 1px solid var(--primary-color);
+            a {
+                @extend .py-2;
+                display: block;
+                transition: all 0.3s ease-in;
+
+                &:hover {
                     color: var(--secondary-color);
                 }
             }

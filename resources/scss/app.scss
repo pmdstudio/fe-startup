@@ -10,6 +10,7 @@ $primary: #003b53;
 $secondary: #007fb4;
 $info: #b0dbed;
 $success: #8cc747;
+$light: #e6ebed;
 
 $card-border-radius: 1.25rem;
 
@@ -19,4 +20,4 @@ $card-border-radius: 1.25rem;
 /* Custom styles */
 // @import "fonts.scss";
 @import "site.scss";
-// @import "mobile.scss";
+@import "mobile.scss";
