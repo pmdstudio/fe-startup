@@ -194,7 +194,7 @@ header {
 
 section {
     .title {
-        @extend .mb-5, .fw-bold;
+        @extend .fw-bold;
     }
 
     .container {
@@ -211,6 +211,8 @@ section {
 
             figure {
                 @extend .bg-gradient-blue;
+                @extend .m-0, .p-0;
+
                 img {
                     transition: all 0.3s ease-in;
                 }

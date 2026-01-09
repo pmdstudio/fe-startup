@@ -14,10 +14,14 @@ $partners = \App\Helpers\DataHelper::load()['partners']['items'];
         <div class="row gy-4">
             <div class="col-md-8">
                 <h3>
-                    Програма за насърчаване на научноизследователската и иновационната дейност чрез подкрепа за разработване, внедряване и мащабиране на високотехнологични решения, базирани на изкуствен интелект, дигитализация, зелени технологии и устойчиво индустриално развитие в българските предприятия
+                    Програма за насърчаване на научноизследователската и иновационната дейност чрез подкрепа за
+                    разработване, внедряване и мащабиране на високотехнологични решения, базирани на изкуствен интелект,
+                    дигитализация, зелени технологии и устойчиво индустриално развитие в българските предприятия
                 </h3>
                 <p>
-                    Програмата е насочена към стимулиране на конкурентоспособността и технологичната трансформация на българските предприятия чрез целенасочено финансиране на иновационни проекти с висока добавена стойност.
+                    Програмата е насочена към стимулиране на конкурентоспособността и технологичната трансформация на
+                    българските предприятия чрез целенасочено финансиране на иновационни проекти с висока добавена
+                    стойност.
                 </p>
                 <a href="#" class="btn btn-outline-primary">
                     Виж повече
@@ -58,7 +62,17 @@ $partners = \App\Helpers\DataHelper::load()['partners']['items'];
 
 <section class="programs bg-gradient-blue">
     <div class="container">
-        <h1 class="title">Активни Програми</h1>
+        <div class="row mb-5">
+            <div class="col-sm-8 col-md-9">
+                <h1 class="title">Активни Програми</h1>
+            </div>
+            <div class="col-sm-4 col-md-3 text-md-end text-sm-left">
+                <a href="#" class="btn btn-outline-light">
+                    Всички програми
+                </a>
+            </div>
+        </div>
+
         <div class="row gy-4">
             <!-- programs section -->
             @foreach($programs['items'] as $program)
@@ -71,8 +85,9 @@ $partners = \App\Helpers\DataHelper::load()['partners']['items'];
                     <div class="card-body p-0 mb-2">
                         <div class="row m-0">
                             <div class="col-sm-4 bg">
-                                <h4 class="card-title px-4 m-0">
-                                    <a href="#" class="stretched-link" title="{{ $program['title'] }}">{{ $program['title'] }}</a>
+                                <h4 class="card-title p-4 m-0">
+                                    <a href="#" class="stretched-link"
+                                        title="{{ $program['title'] }}">{{ $program['title'] }}</a>
                                 </h4>
                             </div>
                             <div class="col-sm-5">
@@ -110,7 +125,16 @@ $partners = \App\Helpers\DataHelper::load()['partners']['items'];
 
 <section class="news bg-light">
     <div class="container">
-        <h1 class="title">{{ $news['title'] }}</h1>
+        <div class="row mb-5">
+            <div class="col-sm-8 col-md-9">
+                <h1 class="title">{{ $news['title'] }}</h1>
+            </div>
+            <div class="col-sm-4 col-md-3 text-md-end text-sm-left">
+                <a href="#" class="btn btn-outline-primary">
+                    Всички новини
+                </a>
+            </div>
+        </div>
         <div class="row gy-4">
 
             <!-- news section -->
@@ -175,7 +199,8 @@ $partners = \App\Helpers\DataHelper::load()['partners']['items'];
             @foreach($partners as $partner)
             <div class="col-6 col-sm-6 col-md-4 col-lg-3">
                 <figure class="partner-logo">
-                    <a href="{{ $partner['url']}} "><img src="{{ asset('assets/img/' . $partner['img']) }}" class="img-fluid"></a>
+                    <a href="{{ $partner['url']}} "><img src="{{ asset('assets/img/' . $partner['img']) }}"
+                            class="img-fluid"></a>
                 </figure>
             </div>
             @endforeach

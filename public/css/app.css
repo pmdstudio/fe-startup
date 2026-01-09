@@ -18477,7 +18477,7 @@ textarea.form-control-lg {
   order: 6 !important;
 }
 
-.m-0 {
+.m-0, section.news .card figure {
   margin: 0 !important;
 }
 
@@ -18651,7 +18651,7 @@ textarea.form-control-lg {
   margin-bottom: 1.5rem !important;
 }
 
-.mb-5, section .title {
+.mb-5 {
   margin-bottom: 3rem !important;
 }
 
@@ -18687,7 +18687,7 @@ textarea.form-control-lg {
   margin-left: auto !important;
 }
 
-.p-0 {
+.p-0, section.news .card figure {
   padding: 0 !important;
 }
 
