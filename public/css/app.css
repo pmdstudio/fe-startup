@@ -17959,7 +17959,7 @@ textarea.form-control-lg {
   box-shadow: var(--bs-box-shadow-sm) !important;
 }
 
-.shadow-lg, section.news .card:hover, .card:hover {
+.shadow-lg, section.news .card:hover, .card:hover, header nav .dropdown-menu {
   box-shadow: var(--bs-box-shadow-lg) !important;
 }
 
@@ -18477,7 +18477,7 @@ textarea.form-control-lg {
   order: 6 !important;
 }
 
-.m-0, section.news .card figure {
+.m-0, section.news .card figure, header nav .dropdown-menu {
   margin: 0 !important;
 }
 
@@ -18687,7 +18687,7 @@ textarea.form-control-lg {
   margin-left: auto !important;
 }
 
-.p-0, section.news .card figure {
+.p-0, section.news .card figure, header nav .dropdown-menu {
   padding: 0 !important;
 }
 
@@ -18751,7 +18751,7 @@ textarea.form-control-lg {
   padding-bottom: 0.25rem !important;
 }
 
-.py-2, footer ul li a {
+.py-2, footer ul li a, header nav .dropdown-menu .dropdown-item {
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
 }
@@ -19527,7 +19527,7 @@ textarea.form-control-lg {
   border-radius: var(--bs-border-radius) !important;
 }
 
-.rounded-0 {
+.rounded-0, header nav .dropdown-menu {
   border-radius: 0 !important;
 }
 
@@ -22636,11 +22636,6 @@ textarea.form-control-lg {
 }
 
 body {
-  background-image: url("/assets/img/bg.png");
-  background-size: cover;
-  background-position: 50% 0%;
-  background-repeat: no-repeat;
-  background-color: var(--light-color);
   font-family: var(--font-family);
   color: var(--primary-color);
 }
@@ -22656,6 +22651,13 @@ body h3, body .h3 {
 body h4, body .h4 {
   font-size: 1.25rem;
 }
+body.home {
+  background-image: url("/assets/img/bg.png");
+  background-size: cover;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-color: var(--light-color);
+}
 
 .brand {
   text-decoration: none;
@@ -22669,9 +22671,17 @@ header nav .nav-item .nav-link {
   padding: 1rem 1rem 0.75rem 1rem !important;
   transition: all 0.3s ease-in;
 }
-header nav .nav-item .nav-link:hover {
+header nav .nav-item .nav-link:hover, header nav .nav-item .nav-link.show {
   background: #004d6d;
   border-bottom: 0.25rem solid var(--secondary-color);
+}
+header nav .dropdown-menu {
+  min-width: 300px;
+  border-color: var(--secondary-color);
+}
+header nav .dropdown-menu .dropdown-item:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
 }
 
 .bg-gradient-blue, section.news .card figure {

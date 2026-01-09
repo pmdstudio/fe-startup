@@ -1,6 +1,6 @@
 @php
-$menu = \App\Helpers\DataHelper::load()['menu'];
-$footerMenu = \App\Helpers\DataHelper::load()['footerMenu'];
+$footer_menu_left = \App\Helpers\DataHelper::load()['menu'];
+$footer_menu_right = \App\Helpers\DataHelper::load()['footer_menu'];
 @endphp
 
 <footer class="mt-auto">
@@ -25,7 +25,7 @@ $footerMenu = \App\Helpers\DataHelper::load()['footerMenu'];
                 <div class="card bg-transparent h-100">
                     <div class="card-body">
                         <ul class="list-unstyled">
-                            @foreach($menu as $link)
+                            @foreach($footer_menu_left as $link)
                             <li><a href="{{ route($link['route']) }}">{{ $link['title'] }}</a></li>
                             @endforeach
                         </ul>
@@ -36,7 +36,7 @@ $footerMenu = \App\Helpers\DataHelper::load()['footerMenu'];
                 <div class="card bg-transparent h-100">
                     <div class="card-body">
                         <ul class="list-unstyled">
-                            @foreach($footerMenu as $link)
+                            @foreach($footer_menu_right as $link)
                             <li><a href="{{ route($link['route']) }}">{{ $link['title'] }}</a></li>
                             @endforeach
                         </ul>

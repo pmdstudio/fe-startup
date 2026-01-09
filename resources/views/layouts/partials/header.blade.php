@@ -31,7 +31,7 @@ $data = \App\Helpers\DataHelper::load();
                 <img src="{{ asset('assets/img/logo-nif-full.svg') }}" alt="Logo" class="logo">
             </a>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary rounded-lg px-3 py-0">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary rounded-lg p-0">
 
             <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarMenu">
@@ -41,10 +41,22 @@ $data = \App\Helpers\DataHelper::load();
             <div class="collapse navbar-collapse" id="navbarMenu">
                 <ul class="navbar-nav mx-auto">
                     @foreach($data['menu'] as $item)
-                    <li class="nav-item">
+                    <li class="nav-item {{ !empty($item['submenu']) ? 'dropdown' : '' }}">
+                        @if(!empty($item['submenu']))
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            {{ $item['title'] }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            @foreach($item['submenu'] as $subItem)
+                            <li><a class="dropdown-item" href="{{ route($subItem['route']) }}">{{ $subItem['title'] }}</a></li>
+                            @endforeach
+
+                        </ul>
+                        @else
                         <a class="nav-link" href="{{ route($item['route']) }}">
                             {{ $item['title'] }}
                         </a>
+                        @endif
                     </li>
                     @endforeach
                 </ul>

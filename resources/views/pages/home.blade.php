@@ -8,7 +8,6 @@ $programs = \App\Helpers\DataHelper::load()['programs'];
 $partners = \App\Helpers\DataHelper::load()['partners']['items'];
 @endphp
 
-
 <section class="home bg-transparent my-5">
     <div class="container">
         <div class="row gy-4">

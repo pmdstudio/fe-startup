@@ -1,16 +1,37 @@
 {
     "menu": [
-        { "title": "За фонда", "route": "home" },
-        { "title": "Програми и финансиране", "route": "page" },
-        { "title": "Условия за кандидатстване", "route": "page" },
-        { "title": "Проекти и резултати", "route": "page" },
-        { "title": "Новини и събоития", "route": "page" },
-        { "title": "Документи", "route": "page" }
+        {
+            "title": "За фонда",
+            "route": "about",
+            "submenu": [
+                { "title": "За фонда", "route": "about" },
+                { "title": "Мисия и цели", "route": "mission" },
+                { "title": "Управление", "route": "page" },
+                { "title": "Екип", "route": "team" }
+            ]
+        },
+        {
+            "title": "Програми и финансиране",
+            "route": "programs",
+            "submenu": [
+                { "title": "Активни програми", "route": "programs" },
+                { "title": "Предстоящи програми", "route": "page" },
+                { "title": "Затворени програми", "route": "page" }
+            ]
+        },
+        {
+            "title": "Условия за кандидатстване",
+            "route": "page",
+            "submenu": []
+        },
+        { "title": "Проекти и резултати", "route": "projects", "submenu": [] },
+        { "title": "Новини и събоития", "route": "news-single", "submenu": [] },
+        { "title": "Документи", "route": "documents", "submenu": [] }
     ],
 
-    "footerMenu": [
-        { "title": "Карта на сайта", "route": "home" },
-        { "title": "Условия за ползване", "route": "page" },
+    "footer_menu": [
+        { "title": "Карта на сайта", "route": "sitemap" },
+        { "title": "Условия за ползване", "route": "terms" },
         { "title": "Политика за поверителност", "route": "page" },
         { "title": "Декларация за достъпност", "route": "page" },
         { "title": "Декларации по ЗПКОНПИ", "route": "page" },
@@ -18,8 +39,8 @@
     ],
 
     "top_menu": [
-        { "title": "Контакти", "route": "page" },
-        { "title": "Карта на сайта", "route": "page" }
+        { "title": "Контакти", "route": "contacts" },
+        { "title": "Карта на сайта", "route": "sitemap" }
     ],
     "home": {
         "title": "Welcome",
