@@ -17763,7 +17763,7 @@ textarea.form-control-lg {
   content: "";
 }
 
-.text-truncate {
+.text-truncate, header nav .nav-item .nav-link span {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -22631,6 +22631,7 @@ textarea.form-control-lg {
   --light-color: #e6ebed;
   --dark-color: #001d2a;
   --font-family: "Sofia Sans", sans-serif;
+  --font-brand: "Montserrat", sans-serif;
   --icon-font-family: "Font Awesome 7 Free";
   --thumbnail-ratio: 1.5;
 }
@@ -22662,18 +22663,35 @@ body.home {
 .brand {
   text-decoration: none;
   display: block;
-  width: 100%;
-  max-width: 300px;
+  margin-right: auto;
 }
 
+header nav {
+  border-radius: 1.25rem 0 1.25rem 0 !important;
+}
+header nav .navbar-toggler {
+  border: none;
+}
+header nav .navbar-toggler:focus {
+  box-shadow: none;
+}
 header nav .nav-item .nav-link {
   border-bottom: 0.25rem solid transparent;
   padding: 1rem 1rem 0.75rem 1rem !important;
   transition: all 0.3s ease-in;
+  max-width: 100%;
+}
+header nav .nav-item .nav-link span {
+  display: inline-block;
+  max-width: 100%;
+  line-height: 1;
 }
 header nav .nav-item .nav-link:hover, header nav .nav-item .nav-link.show {
   background: #004d6d;
   border-bottom: 0.25rem solid var(--secondary-color);
+}
+header nav .dropdown-toggle::after {
+  margin: 0;
 }
 header nav .dropdown-menu {
   min-width: 300px;
@@ -22814,5 +22832,21 @@ footer ul li a:hover {
   .container-sm,
   .container {
     max-width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-nav {
+    flex-direction: row;
+  }
+  header nav .nav-item .nav-link {
+    max-width: 15vw;
+  }
+}
+@media (max-width: 768px) {
+  header nav .dropdown-toggle::after {
+    margin: 0;
+    position: absolute;
+    right: 1rem;
+    top: 43%;
   }
 }

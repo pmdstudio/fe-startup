@@ -26,15 +26,15 @@ $data = \App\Helpers\DataHelper::load();
 
 <header>
     <div class="container">
-        <div class="py-5">
+        <div class="py-5 d-flex align-items-center">
             <a href="{{ route('home') }}" class="brand">
-                <img src="{{ asset('assets/img/logo-nif-full.svg') }}" alt="Logo" class="logo">
+                <img src="{{ asset('assets/img/state-brand.svg') }}" alt="Logo" class="logo">
             </a>
+            <img src="{{ asset('assets/img/logo-nif.svg') }}" alt="Logo" class="logo">
         </div>
-        <nav class="navbar navbar-expand-md navbar-dark bg-primary rounded-lg p-0">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary py-0 px-3">
 
-            <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarMenu">
+            <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -43,18 +43,20 @@ $data = \App\Helpers\DataHelper::load();
                     @foreach($data['menu'] as $item)
                     <li class="nav-item {{ !empty($item['submenu']) ? 'dropdown' : '' }}">
                         @if(!empty($item['submenu']))
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                            {{ $item['title'] }}
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-expanded="false">
+                            <span>{{ $item['title'] }}</span>
                         </a>
                         <ul class="dropdown-menu">
                             @foreach($item['submenu'] as $subItem)
-                            <li><a class="dropdown-item" href="{{ route($subItem['route']) }}">{{ $subItem['title'] }}</a></li>
+                            <li><a class="dropdown-item"
+                                    href="{{ route($subItem['route']) }}">{{ $subItem['title'] }}</a></li>
                             @endforeach
 
                         </ul>
                         @else
                         <a class="nav-link" href="{{ route($item['route']) }}">
-                            {{ $item['title'] }}
+                            <span>{{ $item['title'] }}</span>
                         </a>
                         @endif
                     </li>

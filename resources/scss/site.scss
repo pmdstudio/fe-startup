@@ -8,6 +8,7 @@
     --dark-color: #001d2a;
 
     --font-family: "Sofia Sans", sans-serif;
+    --font-brand: "Montserrat", sans-serif;
     --icon-font-family: "Font Awesome 7 Free";
     --thumbnail-ratio: 1.5; // 375 x 250
 }
@@ -42,25 +43,42 @@ body {
 .brand {
     text-decoration: none;
     display: block;
-    width: 100%;
-    max-width: 300px;
+    margin-right: auto;
 }
 
 header {
     nav {
+        border-radius: 1.25rem 0 1.25rem 0 !important;
+        .navbar-toggler {
+            border: none;
+            &:focus {
+                box-shadow: none;
+            }
+        }
         .nav-item {
             .nav-link {
                 // @extend .text-truncate;
                 border-bottom: 0.25rem solid transparent;
                 padding: 1rem 1rem 0.75rem 1rem !important;
                 transition: all 0.3s ease-in;
+                max-width: 100%;
 
+                span {
+                    @extend .text-truncate;
+                    display: inline-block;
+                    max-width: 100%;
+                    line-height: 1;
+                }
                 &:hover,
                 &.show {
                     background: #004d6d;
                     border-bottom: 0.25rem solid var(--secondary-color);
                 }
             }
+        }
+
+        .dropdown-toggle::after {
+            margin: 0;
         }
 
         .dropdown-menu {
