@@ -17951,7 +17951,7 @@ textarea.form-control-lg {
   display: none !important;
 }
 
-.shadow, section.news .card, .card {
+.shadow, section.home .card, section.news .card {
   box-shadow: var(--bs-box-shadow) !important;
 }
 
@@ -22631,7 +22631,6 @@ textarea.form-control-lg {
   --light-color: #e6ebed;
   --dark-color: #001d2a;
   --font-family: "Sofia Sans", sans-serif;
-  --font-brand: "Montserrat", sans-serif;
   --icon-font-family: "Font Awesome 7 Free";
   --thumbnail-ratio: 1.5;
 }
@@ -22665,6 +22664,9 @@ body.home {
   display: block;
   margin-right: auto;
 }
+.brand .logo {
+  max-width: 100%;
+}
 
 header nav {
   border-radius: 1.25rem 0 1.25rem 0 !important;
@@ -22686,7 +22688,11 @@ header nav .nav-item .nav-link span {
   max-width: 100%;
   line-height: 1;
 }
-header nav .nav-item .nav-link:hover, header nav .nav-item .nav-link.show {
+header nav .nav-item .nav-link:hover, header nav .nav-item .nav-link.show, header nav .nav-item .nav-link.active {
+  background: #004d6d;
+  border-bottom: 0.25rem solid var(--secondary-color);
+}
+header nav .nav-item:has(a.active) .nav-link {
   background: #004d6d;
   border-bottom: 0.25rem solid var(--secondary-color);
 }
@@ -22697,7 +22703,7 @@ header nav .dropdown-menu {
   min-width: 300px;
   border-color: var(--secondary-color);
 }
-header nav .dropdown-menu .dropdown-item:hover {
+header nav .dropdown-menu .dropdown-item:hover, header nav .dropdown-menu .dropdown-item.active {
   background-color: var(--secondary-color);
   color: #fff;
 }
@@ -22791,11 +22797,12 @@ section .container {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-section.news .card {
+section.home .card, section.news .card {
   transition: all 0.3s ease-in;
 }
 section.news .card figure img {
   transition: all 0.3s ease-in;
+  overflow: auto;
 }
 section.news .card:hover .card-text {
   color: var(--secondary-color);
@@ -22824,6 +22831,15 @@ footer ul li a {
 }
 footer ul li a:hover {
   color: var(--secondary-color);
+}
+
+.page .page-content p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.page .page-content p:first-child {
+  font-weight: 700;
+  font-size: 1.25rem;
 }
 
 @media (max-width: 992px) {

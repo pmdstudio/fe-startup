@@ -8,7 +8,6 @@
     --dark-color: #001d2a;
 
     --font-family: "Sofia Sans", sans-serif;
-    --font-brand: "Montserrat", sans-serif;
     --icon-font-family: "Font Awesome 7 Free";
     --thumbnail-ratio: 1.5; // 375 x 250
 }
@@ -44,6 +43,9 @@ body {
     text-decoration: none;
     display: block;
     margin-right: auto;
+    .logo {
+        max-width: 100%;
+    }
 }
 
 header {
@@ -70,7 +72,15 @@ header {
                     line-height: 1;
                 }
                 &:hover,
-                &.show {
+                &.show,
+                &.active {
+                    background: #004d6d;
+                    border-bottom: 0.25rem solid var(--secondary-color);
+                }
+            }
+
+            &:has(a.active) {
+                .nav-link {
                     background: #004d6d;
                     border-bottom: 0.25rem solid var(--secondary-color);
                 }
@@ -89,7 +99,8 @@ header {
             .dropdown-item {
                 @extend .py-2;
 
-                &:hover {
+                &:hover,
+                &.active {
                     background-color: var(--secondary-color);
                     color: #fff;
                 }
@@ -122,33 +133,12 @@ header {
 }
 
 .card {
-    @extend .shadow;
     border: none;
     border-radius: 1.25rem 0 1.25rem 0 !important;
     border-bottom: 3px solid var(--primary-color);
     transition: all 0.3s ease-in;
     anchor-name: --card;
     overflow: hidden;
-
-    // &::before {
-    //     scale: 0;
-    //     content: "+";
-    //     position: absolute;
-    //     position-anchor: --card;
-    //     position-area: top left;
-    //     translate: -25% -25%;
-    //     background: #8cc747;
-    //     color: #fff;
-    //     font-size: 3rem;
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     border-radius: 50%;
-    //     transition: all 0.3s ease-in;
-    //     width: 50px;
-    //     height: 50px;
-    //     border: 0.25rem solid rgba(255, 255, 255, 0.5);
-    // }
 
     a {
         text-decoration: none;
@@ -240,19 +230,23 @@ section {
         padding-bottom: 3rem;
     }
 
-    // &.home {}
-
+    &.home,
     &.news {
         .card {
             transition: all 0.3s ease-in;
             @extend .shadow;
+        }
+    }
 
+    &.news {
+        .card {
             figure {
                 @extend .bg-gradient-blue;
                 @extend .m-0, .p-0;
 
                 img {
                     transition: all 0.3s ease-in;
+                    overflow: auto;
                 }
             }
 
@@ -300,6 +294,22 @@ footer {
                 &:hover {
                     color: var(--secondary-color);
                 }
+            }
+        }
+    }
+}
+
+// PAGES
+
+.page {
+    .page-content {
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+
+            &:first-child {
+                font-weight: 700;
+                font-size: 1.25rem;
             }
         }
     }

@@ -4,6 +4,8 @@
 @php
 $page = \App\Helpers\DataHelper::load()['page'];
 @endphp
+
+@section('title', $page['title'])
 <div class="container py-4">
     <h1>{{ $page['title'] }}</h1>
     <h6>{{ $page['subtitle'] }}</h6>

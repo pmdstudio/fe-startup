@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', '404')
 
 @section('content')
 <div class="page 404 h-100 align-items-center d-flex">

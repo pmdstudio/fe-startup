@@ -43,19 +43,20 @@ $data = \App\Helpers\DataHelper::load();
                     @foreach($data['menu'] as $item)
                     <li class="nav-item {{ !empty($item['submenu']) ? 'dropdown' : '' }}">
                         @if(!empty($item['submenu']))
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle {{ request()->routeIs($item['route']) ? 'active' : '' }}"
+                            data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
                             <span>{{ $item['title'] }}</span>
                         </a>
                         <ul class="dropdown-menu">
                             @foreach($item['submenu'] as $subItem)
-                            <li><a class="dropdown-item"
+                            <li><a class="dropdown-item {{ request()->routeIs($subItem['route']) ? 'active' : '' }}"
                                     href="{{ route($subItem['route']) }}">{{ $subItem['title'] }}</a></li>
                             @endforeach
 
                         </ul>
                         @else
-                        <a class="nav-link" href="{{ route($item['route']) }}">
+                        <a class="nav-link {{ request()->routeIs($item['route']) ? 'active' : '' }}"
+                            href="{{ route($item['route']) }}">
                             <span>{{ $item['title'] }}</span>
                         </a>
                         @endif

@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Национален иновационен фонд')
 
 @section('content')
 @php
@@ -147,7 +148,7 @@ $partners = \App\Helpers\DataHelper::load()['partners']['items'];
                         <p class="text-secondary mb-2">
                             {{ $post['date'] }}
                         </p>
-                        <a href="#" class="card-text stretched-link text-decoration-none fs-5">
+                        <a href="{{ route($post['url']) }}" class="card-text stretched-link text-decoration-none fs-5">
                             {{ $post['title'] }}
                         </a>
                     </div>
@@ -177,7 +178,7 @@ $partners = \App\Helpers\DataHelper::load()['partners']['items'];
                         <p class="text-secondary mb-2">
                             {{ $post['date'] }}
                         </p>
-                        <a href="#" class="card-text stretched-link text-decoration-none fs-5">
+                        <a href="{{ route($post['url']) }}" class="card-text stretched-link text-decoration-none fs-5">
                             {{ $post['title'] }}
                         </a>
                     </div>
