@@ -67,7 +67,7 @@ $partners = \App\Helpers\DataHelper::load()['partners']['items'];
                 <h1 class="title">Активни Програми</h1>
             </div>
             <div class="col-sm-4 col-md-3 text-md-end text-sm-left">
-                <a href="#" class="btn btn-outline-light">
+                <a href="{{ route('programs') }}" class="btn btn-outline-light">
                     Всички програми
                 </a>
             </div>
@@ -75,7 +75,7 @@ $partners = \App\Helpers\DataHelper::load()['partners']['items'];
 
         <div class="row gy-4">
             <!-- programs section -->
-            @foreach($programs['items'] as $program)
+            @foreach(array_slice($programs['items'], 0, 3) as $program)
             <?php
             $card_class = $program['status'] === 1 ? 'active' : ($program['status'] === 2 ? 'upcomming' : 'past');
             $program_status = $program['status'] === 1 ? 'Активна' : ($program['status'] === 2 ? 'Предстояща' : 'Минала');

@@ -136,7 +136,7 @@ header {
     border: none;
     border-radius: 1.25rem 0 1.25rem 0 !important;
     border-bottom: 3px solid var(--primary-color);
-    transition: all 0.3s ease-in;
+    transition: box-shadow 0.3s ease-in;
     anchor-name: --card;
     overflow: hidden;
 
@@ -149,7 +149,7 @@ header {
         @extend .rounded, .d-flex, .align-items-center;
         background-color: var(--light-color);
         color: var(--primary-color);
-        transition: all 0.3s ease-in;
+        transition: background-color 0.3s ease-in;
     }
 
     .img-fluid {
@@ -231,10 +231,21 @@ section {
     }
 
     &.home,
-    &.news {
+    &.news,
+    &.programs {
         .card {
             transition: all 0.3s ease-in;
             @extend .shadow;
+        }
+
+        .btn-group {
+            a {
+                @extend .text-light;
+                &:hover,
+                &.active {
+                    @extend .text-primary;
+                }
+            }
         }
     }
 
