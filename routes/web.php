@@ -12,19 +12,38 @@ Route::get('/', function () {
 
 // available routes
 $routes = [
-    'about', 'projects', 'documents', 'news', 'contacts', 'sitemap', 'privacy', 'terms', '404', 'mission', 'page', 'team', 'programs', 'news-single'
+    'about',
+    'projects',
+    'documents',
+    'news',
+    'contacts',
+    'sitemap',
+    'privacy',
+    'terms',
+    '404',
+    'mission',
+    'page',
+    'team',
+    'programs',
+    'news-single',
+    'upcomming-programs',
+    'past-programs',
+    'candidature',
+    'declaration',
+    'anticorruption',
+    'accessibility'
 ];
 
 // Генериране на страници от routes
 foreach ($routes as $route) {
 
 
-        Route::get("/{$route}", function () use ($route) {
+    Route::get("/{$route}", function () use ($route) {
 
-            if (!View::exists("pages." . $route)) {
-                return response()->view("pages.404");
-            }
+        if (!View::exists("pages." . $route)) {
+            return response()->view("pages.404");
+        }
 
-            return view("pages.{$route}");
-        })->name($route);
+        return view("pages.{$route}");
+    })->name($route);
 }

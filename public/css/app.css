@@ -22680,8 +22680,10 @@ header nav .navbar-toggler:focus {
 header nav .nav-item .nav-link {
   border-bottom: 0.25rem solid transparent;
   padding: 1rem 1rem 0.75rem 1rem !important;
+  line-height: 0;
   transition: all 0.3s ease-in;
   max-width: 100%;
+  position: relative;
 }
 header nav .nav-item .nav-link span {
   display: inline-block;

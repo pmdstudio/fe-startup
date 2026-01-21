@@ -62,8 +62,10 @@ header {
                 // @extend .text-truncate;
                 border-bottom: 0.25rem solid transparent;
                 padding: 1rem 1rem 0.75rem 1rem !important;
+                line-height: 0;
                 transition: all 0.3s ease-in;
                 max-width: 100%;
+                position: relative;
 
                 span {
                     @extend .text-truncate;

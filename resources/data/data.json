@@ -15,13 +15,16 @@
             "route": "programs",
             "submenu": [
                 { "title": "Активни програми", "route": "programs" },
-                { "title": "Предстоящи програми", "route": "page" },
-                { "title": "Затворени програми", "route": "page" }
+                {
+                    "title": "Предстоящи програми",
+                    "route": "upcomming-programs"
+                },
+                { "title": "Затворени програми", "route": "past-programs" }
             ]
         },
         {
             "title": "Условия за кандидатстване",
-            "route": "page",
+            "route": "candidature",
             "submenu": []
         },
         { "title": "Проекти и резултати", "route": "projects", "submenu": [] },
@@ -32,10 +35,10 @@
     "footer_menu": [
         { "title": "Карта на сайта", "route": "sitemap" },
         { "title": "Условия за ползване", "route": "terms" },
-        { "title": "Политика за поверителност", "route": "page" },
-        { "title": "Декларация за достъпност", "route": "page" },
-        { "title": "Декларации по ЗПКОНПИ", "route": "page" },
-        { "title": "Антикорупция", "route": "page" }
+        { "title": "Политика за поверителност", "route": "privacy" },
+        { "title": "Декларация за достъпност", "route": "accessibility" },
+        { "title": "Декларации по ЗПКОНПИ", "route": "declaration" },
+        { "title": "Антикорупция", "route": "anticorruption" }
     ],
 
     "top_menu": [
