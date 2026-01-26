@@ -8373,7 +8373,7 @@
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?8ae0d37556ff1e685de2acb2a675ebaf);
+  src: url("../webfonts/fa-solid-900.woff2");
 }
 .fas {
   --fa-family: var(--fa-family-classic);
@@ -8394,38 +8394,6 @@
  * Copyright 2025 Fonticons, Inc.
  */
 :root, :host {
-  --fa-family-classic: 'Font Awesome 7 Free';
-  --fa-font-regular: normal 400 1em/1 var(--fa-family-classic);
-  /* deprecated: this older custom property will be removed next major release */
-  --fa-style-family-classic: var(--fa-family-classic);
-}
-
-@font-face {
-  font-family: "Font Awesome 7 Free";
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?6f05ca9ab7b5345dbc07d1339a8b593b);
-}
-.far {
-  --fa-family: var(--fa-family-classic);
-  --fa-style: 400;
-}
-
-.fa-classic {
-  --fa-family: var(--fa-family-classic);
-}
-
-.fa-regular {
-  --fa-style: 400;
-}
-
-/*!
- * Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- * Copyright 2025 Fonticons, Inc.
- */
-:root, :host {
   --fa-family-brands: 'Font Awesome 7 Brands';
   --fa-font-brands: normal 400 1em/1 var(--fa-family-brands);
 }
@@ -8435,7 +8403,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?1c5c7716b05754cb4eab190e5ed2838c);
+  src: url("../webfonts/fa-brands-400.woff2");
 }
 .fab,
 .fa-brands,
@@ -22844,6 +22812,48 @@ footer ul li a:hover {
   font-size: 1.25rem;
 }
 
+@font-face {
+  font-family: "Sofia Sans";
+  src: url("../webfonts/SofiaSans-Light.woff2") format("woff2"), url("../webfonts/SofiaSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sofia Sans";
+  src: url("../webfonts/SofiaSans-ExtraBold.woff2") format("woff2"), url("../webfonts/SofiaSans-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sofia Sans";
+  src: url("../webfonts/SofiaSans-Medium.woff2") format("woff2"), url("../webfonts/SofiaSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sofia Sans";
+  src: url("../webfonts/SofiaSans-Bold.woff2") format("woff2"), url("../webfonts/SofiaSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sofia Sans";
+  src: url("../webfonts/SofiaSans-Regular.woff2") format("woff2"), url("../webfonts/SofiaSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sofia Sans";
+  src: url("../webfonts/SofiaSans-Thin.woff2") format("woff2"), url("../webfonts/SofiaSans-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
 @media (min-width: 768px) {
   .navbar-expand-md .navbar-nav {
     flex-direction: row;
