@@ -18667,7 +18667,7 @@ textarea.form-control-lg {
   padding: 0.5rem !important;
 }
 
-.p-3 {
+.p-3, .page .page-title {
   padding: 1rem !important;
 }
 
@@ -19369,7 +19369,7 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-light {
+.bg-light, .page .page-title {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
 }
@@ -19491,7 +19491,7 @@ textarea.form-control-lg {
   pointer-events: auto !important;
 }
 
-.rounded, .card .bg {
+.rounded, .page .page-title, .card .bg {
   border-radius: var(--bs-border-radius) !important;
 }
 
@@ -22684,7 +22684,7 @@ header nav .dropdown-menu .dropdown-item:hover, header nav .dropdown-menu .dropd
   color: #ffffff;
 }
 
-.rounded, .card .bg {
+.rounded, .page .page-title, .card .bg {
   border-radius: 1.25rem 0 1.25rem 0 !important;
 }
 
@@ -22700,10 +22700,12 @@ header nav .dropdown-menu .dropdown-item:hover, header nav .dropdown-menu .dropd
 .card {
   border: none;
   border-radius: 1.25rem 0 1.25rem 0 !important;
-  border-bottom: 3px solid var(--primary-color);
   transition: box-shadow 0.3s ease-in;
   anchor-name: --card;
   overflow: hidden;
+}
+.card.bordered {
+  border-bottom: 3px solid var(--primary-color);
 }
 .card a {
   text-decoration: none;

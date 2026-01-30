@@ -1,55 +1,56 @@
 @extends('layouts.app')
-@section('title', 'Активни програми')
+@section('title', 'Програми')
 
 @section('content')
 @php
-$programs = \App\Helpers\DataHelper::load()['programs'];
+$programs = \App\Helpers\DataHelper::load()['programs']['items'];
 @endphp
-<div class="news container py-4">
+<div class="page container py-4">
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('home') }}">Начало</a></li>
-            <li class="breadcrumb-item active">Активни програми</li>
+            <li class="breadcrumb-item active">Програми</li>
         </ol>
     </nav>
     <div class="page-content py-4">
-        @include('pages.partials.programs-filter')
-        <section class="programs mt-4">
-            <div class="row mb-5 align-items-center">
-                <div class="col-md-6">
-                    <h1 class="title">Активни Програми</h1>
+        <section class="programs">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="page-title mb-4">Активни Програми</h2>
                 </div>
-                <div class="col-md-6 text-md-end text-sm-left">
+            </div>
+            <div class="row mb-4">
+                <div class="col-sm-12">
+                    @include('pages.partials.programs-filter')
+                </div>
+                <div class="col-sm-12 text-end py-2 d-none d-md-block">
                     Изберете изглед
 
                     <div class="btn-group" role="group">
-                        <a href="#" class="btn btn-link pe-1"
-                            onClick="document.querySelector('.programs').classList.add('grid'); document.querySelectorAll('.programs .btn-group a').forEach(el => el.classList.remove('active')); this.classList.add('active');">
+                        <a href="#" class="btn btn-link pe-1" id="grid-view-btn">
                             <i class="fa-solid fa-grip fa-2x"></i>
                         </a>
-                        <a href="#" class="btn btn-link ps-1 active"
-                            onClick="document.querySelector('.programs').classList.remove('grid'); document.querySelectorAll('.programs .btn-group a').forEach(el => el.classList.remove('active')); this.classList.add('active');">
+                        <a href="#" class="btn btn-link ps-1 pe-0 active" id="list-view-btn">
                             <i class="fa-regular fa-rectangle-list fa-2x"></i>
                         </a>
                     </div>
 
                 </div>
             </div>
-
             <div class="row gy-4">
                 <!-- programs section -->
-                @foreach($programs['items'] as $program)
+                @foreach($programs as $program)
                 <?php
                     $card_class = $program['status'] === 1 ? 'active' : ($program['status'] === 2 ? 'upcomming' : 'past');
                     $program_status = $program['status'] === 1 ? 'Активна' : ($program['status'] === 2 ? 'Предстояща' : 'Минала');
                 ?>
                 <div class="col-12">
-                    <div class="card {{  $card_class }}">
+                    <div class="card bordered {{  $card_class }}">
                         <div class="card-body p-0 mb-2">
                             <div class="row m-0">
                                 <div class="col-md-4 bg">
                                     <h4 class="card-title p-4 m-0">
-                                        <a href="#" class="stretched-link"
+                                        <a href="{{ route('programs-single') }}" class="stretched-link"
                                             title="{{ $program['title'] }}">{{ $program['title'] }}</a>
                                     </h4>
                                 </div>

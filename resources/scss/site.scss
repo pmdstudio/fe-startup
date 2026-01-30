@@ -137,10 +137,13 @@ header {
 .card {
     border: none;
     border-radius: 1.25rem 0 1.25rem 0 !important;
-    border-bottom: 3px solid var(--primary-color);
     transition: box-shadow 0.3s ease-in;
     anchor-name: --card;
     overflow: hidden;
+
+    &.bordered {
+        border-bottom: 3px solid var(--primary-color);
+    }
 
     a {
         text-decoration: none;
@@ -315,6 +318,10 @@ footer {
 // PAGES
 
 .page {
+    .page-title {
+        @extend .bg-light, .rounded, .p-3;
+    }
+
     .page-content {
         p {
             font-size: 1rem;

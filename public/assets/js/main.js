@@ -18457,6 +18457,41 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".swiper", {
   }
 });
 
+// switch grid/list view for programs page
+
+function switchView(view, container) {
+  var containerSection = document.querySelector(container);
+  var gridBtn = document.getElementById("grid-view-btn");
+  var listBtn = document.getElementById("list-view-btn");
+  if (!containerSection) {
+    return;
+  }
+  if (view === "grid") {
+    containerSection.classList.add("grid");
+    gridBtn.classList.add("active");
+    listBtn.classList.remove("active");
+  } else {
+    containerSection.classList.remove("grid");
+    listBtn.classList.add("active");
+    gridBtn.classList.remove("active");
+  }
+}
+
+// window.switchView = switchView;
+
+var gridBtn = document.getElementById("grid-view-btn");
+var listBtn = document.getElementById("list-view-btn");
+if (gridBtn && listBtn) {
+  gridBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    switchView("grid", ".programs");
+  });
+  listBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    switchView("list", ".programs");
+  });
+}
+
 /***/ }),
 
 /***/ "./resources/scss/app.scss":

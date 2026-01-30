@@ -28,7 +28,7 @@ $partners = \App\Helpers\DataHelper::load()['partners']['items'];
                 </a>
             </div>
             <div class="col-md-4">
-                <div class="card info">
+                <div class="card info bordered">
                     <div class="card-body bg p-4">
                         <h3 class="card-title mb-0 fw-bold">Онлайн кандидатстване през ИСУН</h3>
                     </div>
@@ -42,7 +42,7 @@ $partners = \App\Helpers\DataHelper::load()['partners']['items'];
             <!-- blocks section -->
             @foreach($page['blocks'] as $block)
             <div class="col-lg-4">
-                <div class="card">
+                <div class="card bordered">
                     <div class="card-body p-4">
                         <figure class="card-img-top">
                             <img src="{{ asset('assets/img/' . $block['img']) }}">
@@ -81,7 +81,7 @@ $partners = \App\Helpers\DataHelper::load()['partners']['items'];
             $program_status = $program['status'] === 1 ? 'Активна' : ($program['status'] === 2 ? 'Предстояща' : 'Минала');
             ?>
             <div class="col-12">
-                <div class="card {{  $card_class }}">
+                <div class="card bordered {{  $card_class }}">
                     <div class="card-body p-0 mb-2">
                         <div class="row m-0">
                             <div class="col-sm-4 bg">

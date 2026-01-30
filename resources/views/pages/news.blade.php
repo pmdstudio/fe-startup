@@ -6,7 +6,7 @@
 $news1 = \App\Helpers\DataHelper::load()['news']['items'];
 $news = array_merge($news1, $news1, $news1);
 @endphp
-<div class="news container py-4">
+<div class="page container py-4">
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('home') }}">Начало</a></li>

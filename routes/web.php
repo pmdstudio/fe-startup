@@ -25,6 +25,7 @@ $routes = [
     'page',
     'team',
     'programs',
+    'programs-single',
     'news-single',
     'upcomming-programs',
     'past-programs',
