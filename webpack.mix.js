@@ -8,6 +8,7 @@ mix.setPublicPath("public")
         "public/assets/webfonts",
     )
     .js("resources/js/app.js", "assets/js/main.js")
+    .js("resources/js/swiper.js", "assets/js/swiper.js")
     .options({ processCssUrls: false })
     .version();
 

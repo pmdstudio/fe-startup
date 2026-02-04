@@ -15,6 +15,7 @@
         </div>
     </main>
     @include('layouts.partials.footer')
+    <script src="{{ asset('assets/js/swiper.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
