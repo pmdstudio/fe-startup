@@ -22652,6 +22652,7 @@ header nav .nav-item .nav-link {
   transition: all 0.3s ease-in;
   max-width: 100%;
   position: relative;
+  color: #fff;
 }
 header nav .nav-item .nav-link span {
   display: inline-block;

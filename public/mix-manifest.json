@@ -1,11 +1,7 @@
 {
     "/assets/js/main.js": "/assets/js/main.js?id=2eb555012fd7ade799ebceec19abe57a",
     "/assets/js/swiper.js": "/assets/js/swiper.js?id=957acfd63a7dc2bdd71327ba767c1581",
-    "/assets/css/main.css": "/assets/css/main.css?id=91efbaee0f4384f58c3a63cd69bc5435",
-    "/assets/webfonts/fa-brands-400.woff2": "/assets/webfonts/fa-brands-400.woff2?id=a2bd65836e7e0a11022ab245fa729a46",
-    "/assets/webfonts/fa-regular-400.woff2": "/assets/webfonts/fa-regular-400.woff2?id=361c2c3c1e1e4d82f04d825edaa07550",
-    "/assets/webfonts/fa-solid-900.woff2": "/assets/webfonts/fa-solid-900.woff2?id=151d5eddd0b377f0c7f8df5d8515d654",
-    "/assets/webfonts/fa-v4compatibility.woff2": "/assets/webfonts/fa-v4compatibility.woff2?id=d642cac2f6fc1ec00aa8c50956f65b74",
+    "/assets/css/main.css": "/assets/css/main.css?id=e16db06f1501cc560747a705526cb46b",
     "/assets/webfonts/SofiaSans-Bold.woff": "/assets/webfonts/SofiaSans-Bold.woff?id=6f89ad61c087f004fc76336c1d96365d",
     "/assets/webfonts/SofiaSans-Bold.woff2": "/assets/webfonts/SofiaSans-Bold.woff2?id=e8fc381eac5d3568e8bd3fe95b34e1c8",
     "/assets/webfonts/SofiaSans-ExtraBold.woff": "/assets/webfonts/SofiaSans-ExtraBold.woff?id=d1b15d237bc2eda15bf00dc93259700c",
@@ -17,5 +13,9 @@
     "/assets/webfonts/SofiaSans-Regular.woff": "/assets/webfonts/SofiaSans-Regular.woff?id=e7f44523f0f13cfa9271c2c8b28ff4cc",
     "/assets/webfonts/SofiaSans-Regular.woff2": "/assets/webfonts/SofiaSans-Regular.woff2?id=5f81b6dd15a9e30c476903e0d0a6b929",
     "/assets/webfonts/SofiaSans-Thin.woff": "/assets/webfonts/SofiaSans-Thin.woff?id=a4842f8352540ccec49771b331b7ed85",
-    "/assets/webfonts/SofiaSans-Thin.woff2": "/assets/webfonts/SofiaSans-Thin.woff2?id=781f87ca21b024ae771704378d5df653"
+    "/assets/webfonts/SofiaSans-Thin.woff2": "/assets/webfonts/SofiaSans-Thin.woff2?id=781f87ca21b024ae771704378d5df653",
+    "/assets/webfonts/fa-brands-400.woff2": "/assets/webfonts/fa-brands-400.woff2?id=a2bd65836e7e0a11022ab245fa729a46",
+    "/assets/webfonts/fa-regular-400.woff2": "/assets/webfonts/fa-regular-400.woff2?id=361c2c3c1e1e4d82f04d825edaa07550",
+    "/assets/webfonts/fa-solid-900.woff2": "/assets/webfonts/fa-solid-900.woff2?id=151d5eddd0b377f0c7f8df5d8515d654",
+    "/assets/webfonts/fa-v4compatibility.woff2": "/assets/webfonts/fa-v4compatibility.woff2?id=d642cac2f6fc1ec00aa8c50956f65b74"
 }
