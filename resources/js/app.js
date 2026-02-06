@@ -36,3 +36,26 @@ if (gridBtn && listBtn) {
         switchView("list", ".programs");
     });
 }
+
+// multiple select syncing with placeholder
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("select[multiple]").forEach((select) => {
+        const placeholder = select.querySelector("option[hidden]");
+        const placeholderClass =
+            select.dataset.placeholderClass || "text-muted";
+
+        if (!placeholder) return;
+
+        function syncPlaceholder() {
+            const hasRealSelection = Array.from(select.options)
+                .slice(1)
+                .some((opt) => opt.selected);
+
+            placeholder.selected = !hasRealSelection;
+            select.classList.toggle(placeholderClass, !hasRealSelection);
+        }
+
+        select.addEventListener("change", syncPlaceholder);
+        syncPlaceholder();
+    });
+});

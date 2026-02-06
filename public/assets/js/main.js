@@ -7473,6 +7473,24 @@ if (gridBtn && listBtn) {
   });
 }
 
+// multiple select syncing with placeholder
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("select[multiple]").forEach(function (select) {
+    var placeholder = select.querySelector("option[hidden]");
+    var placeholderClass = select.dataset.placeholderClass || "text-muted";
+    if (!placeholder) return;
+    function syncPlaceholder() {
+      var hasRealSelection = Array.from(select.options).slice(1).some(function (opt) {
+        return opt.selected;
+      });
+      placeholder.selected = !hasRealSelection;
+      select.classList.toggle(placeholderClass, !hasRealSelection);
+    }
+    select.addEventListener("change", syncPlaceholder);
+    syncPlaceholder();
+  });
+});
+
 /***/ }),
 
 /***/ "./resources/scss/app.scss":

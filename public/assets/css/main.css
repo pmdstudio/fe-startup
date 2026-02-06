@@ -22815,6 +22815,15 @@ footer ul li a:hover {
   font-size: 1.25rem;
 }
 
+#programs-filter .input-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #6c757d;
+  pointer-events: none;
+}
+
 @font-face {
   font-family: "Sofia Sans";
   src: url("../webfonts/SofiaSans-Light.woff2") format("woff2"), url("../webfonts/SofiaSans-Light.woff") format("woff");
