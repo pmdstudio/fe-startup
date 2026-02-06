@@ -18679,7 +18679,7 @@ textarea.form-control-lg {
   padding: 3rem !important;
 }
 
-.px-0 {
+.px-0, .download-files .list-group-item {
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
@@ -18729,7 +18729,7 @@ textarea.form-control-lg {
   padding-bottom: 1rem !important;
 }
 
-.py-4 {
+.py-4, .download-files .list-group-item {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
 }
@@ -19491,7 +19491,7 @@ textarea.form-control-lg {
   pointer-events: auto !important;
 }
 
-.rounded, .page .page-title, .card .bg {
+.rounded, .download-files .list-group-item, .page .page-title, .card .bg {
   border-radius: var(--bs-border-radius) !important;
 }
 
@@ -22685,7 +22685,7 @@ header nav .dropdown-menu .dropdown-item:hover, header nav .dropdown-menu .dropd
   color: #ffffff;
 }
 
-.rounded, .page .page-title, .card .bg {
+.rounded, .download-files .list-group-item, .page .page-title, .card .bg {
   border-radius: 1.25rem 0 1.25rem 0 !important;
 }
 
@@ -22822,6 +22822,18 @@ footer ul li a:hover {
   transform: translate(-50%, -50%);
   color: #6c757d;
   pointer-events: none;
+}
+
+.download-files .list-group-item {
+  transition: all 0.3s ease-in;
+}
+.download-files .list-group-item:hover, .download-files .list-group-item.active {
+  background-color: #e6f4f9;
+  color: inherit;
+  border-color: transparent;
+}
+.download-files .list-group-item:has(+ .list-group-item:hover) {
+  border-color: transparent;
 }
 
 @font-face {

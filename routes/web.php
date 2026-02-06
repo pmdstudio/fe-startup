@@ -32,7 +32,8 @@ $routes = [
     'candidature',
     'declaration',
     'anticorruption',
-    'accessibility'
+    'accessibility',
+    'download-file',
 ];
 
 // Генериране на страници от routes

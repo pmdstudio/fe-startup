@@ -346,3 +346,22 @@ footer {
         pointer-events: none;
     }
 }
+
+.download-files {
+    .list-group-item {
+        @extend .rounded, .py-4, .px-0;
+
+        transition: all 0.3s ease-in;
+
+        &:hover,
+        &.active {
+            background-color: #e6f4f9;
+            color: inherit;
+            border-color: transparent;
+        }
+
+        &:has(+ .list-group-item:hover) {
+            border-color: transparent;
+        }
+    }
+}
